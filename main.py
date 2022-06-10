@@ -4,21 +4,22 @@ import art
 
 while True:
   print(art.logo)
-  name = input("Please enter your full name.")
-  price = input("Please enter bid price.")
+  name = input("Please enter your full name: ")
+  price = input("Please enter bid price: ")
   bid = {}
   for a in ["name", "price"]:
     bid[a] = eval(a)
-    while True:
-      answer = str(input('Run again? (y/n)?: '))
+
+  while True:
+    answer = str(input('Run again? (y/n)?: '))
     if answer in ('y', 'n'):
-      clear()
       break
     print("invalid input.")
-    if answer == 'y':
-      continue
-    else: 
-      print("Goodbye.")
-      break
+  if answer == 'y':
+    clear()
+    continue
+  else: 
+    print("Goodbye.")
+    break
     
 
